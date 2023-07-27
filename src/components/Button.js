@@ -1,15 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { click } from "@testing-library/user-event/dist/click";
 
-const Button = ({ color, text }) => {
-  const onClick = (e) => {
-    console.log(e);
-  };
-
+const Button = ({ color, text, onAddition }) => {
   return (
     <button
-      onClick={onClick}
       style={{ backgroundColor: color }}
+      onClick={onAddition}
       className="btn"
     >
       {text}
